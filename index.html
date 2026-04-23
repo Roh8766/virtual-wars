@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive assistant to help you understand the election process, timelines, and rules.">
+    <title>Election Assistant | Understand the Democratic Process</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar glass-panel">
+            <div class="logo">
+                <i class="fa-solid fa-check-to-slot"></i>
+                <h2>VoterGuide</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item active" data-target="process-section">
+                    <i class="fa-solid fa-list-ol"></i>
+                    <span>The Process</span>
+                </li>
+                <li class="nav-item" data-target="timeline-section">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span>Timeline</span>
+                </li>
+                <li class="nav-item" data-target="rules-section">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Rules & Regs</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-text">
+                    <h1>Election Assistant</h1>
+                    <p>Your interactive guide to understanding democracy in action.</p>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <!-- Process Section -->
+                <section id="process-section" class="content-section active">
+                    <h2 class="section-title">The Election Process</h2>
+                    <p class="section-subtitle">A step-by-step guide to how elections work.</p>
+                    <div class="process-container" id="process-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Timeline Section -->
+                <section id="timeline-section" class="content-section">
+                    <h2 class="section-title">Election Timeline</h2>
+                    <p class="section-subtitle">Key events leading up to Election Day and beyond.</p>
+                    <div class="timeline" id="timeline-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Rules Section -->
+                <section id="rules-section" class="content-section">
+                    <h2 class="section-title">Rules & Regulations</h2>
+                    <p class="section-subtitle">Essential guidelines for fair and transparent elections.</p>
+                    <div class="rules-container" id="rules-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Floating Assistant Bot UI -->
+        <div class="assistant-bot">
+            <div class="bot-icon" id="bot-toggle">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="bot-panel glass-panel" id="bot-panel">
+                <div class="bot-header">
+                    <h3>Guide Bot</h3>
+                    <button class="close-bot" id="close-bot"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="bot-content" id="bot-message">
+                    Hi! I'm here to help you navigate the election guide. Click on 'The Process' to see how it works!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background decorative elements -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
